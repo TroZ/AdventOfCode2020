@@ -2,5 +2,5 @@
 AdventOfCode 2020
 
 
-My solutions of Advent of cod 2020 puzzles.
+My solutions of Advent of code 2020 puzzles.
 adventofcode.com
