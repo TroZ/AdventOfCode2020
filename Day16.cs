@@ -170,7 +170,8 @@ namespace AdventOfCode2020
             }
 
             //at the point, each field should only have one true in canBe
-
+            //Actually, this isn't true. However, one field will have one possibility, one field will have two possibilities, one will have three, etc.
+            //This will print the possibilities, and I manually figured out the fields from this initially.  See below for code that does this.
             for (int f = 0; f < fields.Count; f++)
             {
                 Console.Write("Field " + fields[f].name + " is position ");
@@ -233,6 +234,7 @@ namespace AdventOfCode2020
 
                 for (int f = 0; f < fields.Count; f++)
                 {
+                    //remove the field we just figure out from the possibilities of other fields
                     canBe[f, single.pos] = false;
 
                     int count = 0;
@@ -247,6 +249,7 @@ namespace AdventOfCode2020
                     }
                     if (count == 1)
                     {
+                        //we just figured out the next field
                         next = fields[f];
                         next.pos = realpos;
                     }
